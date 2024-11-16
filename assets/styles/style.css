@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Open sans';
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
@@ -58,7 +58,7 @@ li a::before{
     top: 25px;
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background: linear-gradient(to right, #009dff, #ff00ff);
 }
 
 li a:hover::before{
@@ -71,6 +71,7 @@ li a:hover::before{
     border: none;
     font-weight: 500;
     font-size: 1rem;
+    font-family: 'Ubuntu';
     color: white;
     cursor: pointer;
     text-wrap: nowrap;
@@ -90,7 +91,7 @@ li a:hover::before{
 
 section{
     min-height: 100vh;
-    padding: 8rem 12%;
+    padding: 8rem 5%;
     width: 100%;
     position: relative;
 }
@@ -98,7 +99,8 @@ section{
 .about{
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    margin-bottom: -149px;
 }
 
 .about .about-container{
@@ -146,6 +148,15 @@ section{
     gap: 1rem;
 }
 
+.projet-card a h3 {
+    font-weight: 800;
+}
+
+.btn:hover {
+    background-color: #6c63ff;
+    color: aqua;
+}
+
 .btn{
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
@@ -185,6 +196,10 @@ section{
     margin-bottom: 3rem;
 }
 
+.experience {
+    margin-bottom: -127px;
+}
+
 .experience-info{
     display: flex;
     align-items: center;
@@ -194,7 +209,7 @@ section{
 
 .experience img{
     width: 24vw;
-    border-radius: 3rem;
+    border-radius: 15px;
 }
 
 .grid{
@@ -205,13 +220,13 @@ section{
 
 .grid-card{
     border: 2px solid black;
-    border-radius: 3rem;
-    padding: 3rem;
+    border-radius: 15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     justify-content: left;
-    cursor: pointer;
+    cursor: default;
     transition: 0.2s ease-in-out;
 
 }
@@ -236,7 +251,7 @@ section{
 }
 
 ::-webkit-scrollbar{
-    width: 20px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track{
@@ -245,6 +260,11 @@ section{
 
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(to bottom, rgb(0, 157, 255), rgb(255, 0, 255));
+    border-radius: 10px;
+}
+
+.projets {
+    margin-bottom: -148px;
 }
 
 .projets-grid{
@@ -252,8 +272,12 @@ section{
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
-.projet-card{
-    padding: 3rem 2rem;
+.projets-grid {
+    gap: 8px;
+}
+
+.projet-card {
+    padding: 2em 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,10 +285,11 @@ section{
     justify-content: center;
     gap: 1.5rem;
     border: 2px solid black;
-    border-radius: 3rem;
-    cursor: pointer;
+    border-radius: 15px;
+    cursor: default;
     transition: 0.3s ease-in-out;
     margin: 20px 0;
+    color: #000000;
 }
 
 .projet-card:hover{
@@ -318,10 +343,17 @@ section{
     border: 2px solid black;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    /* max-width: 400px; */
     width: 100%;
+    /* display: flex; */
     justify-content: center;
-    text-align: center;
+    /* text-align: end; */
+}
+
+#contact-form button{
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 #contact-form label {
@@ -368,6 +400,7 @@ footer{
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 footer ul{
@@ -389,7 +422,7 @@ footer ul li a{
 @media(max-width:1280px){
     header{
         padding: 1rem 2rem;
-        gap: 2rem;
+        gap: 3rem;
     }
     .about .about-container{
         gap: 3rem;
@@ -411,7 +444,7 @@ footer ul li a{
 
 @media(max-width:768px){
     header{
-        gap: 1rem;
+        gap: 3rem;
         padding: 1rem 1rem;
     }
     hearder .logo{
@@ -448,6 +481,7 @@ footer ul li a{
 
     header #menu-icone{
         display: block;
+        
     }
     .nav-links{
         position: absolute;
