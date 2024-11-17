@@ -440,127 +440,135 @@ p .copyright {
 
 @media(max-width:1280px) {
     header {
-        padding: 1rem 2rem;
-        gap: 3rem;
+        padding: 1rem 3rem;
+        gap: 5rem;
     }
-
+    
     .about .about-container {
-        gap: 3rem;
+        gap: 4rem;
     }
-
-    .experience-info {
-        flex-direction: column;
-    }
-
+    
     .input-box {
         padding: 2rem 3rem;
-        font-size: 2.5rem;
-    }
-
-    .input input::placeholder {
-        font-size: 2.5rem;
-    }
-
-    .input-box i {
-        font-size: 2.5rem;
-    }
-}
-
-@media(max-width:768px) {
-    header {
-        gap: 3rem;
-        padding: 1rem 1rem;
-    }
-
-    hearder .logo {
-        font-size: 1rem;
-    }
-
-    header .visit-btn {
-        display: none;
-    }
-
-    .about-container {
-        flex-direction: column;
-    }
-
-    .input-box input {
-        padding: 1rem 2rem;
         font-size: 1.8rem;
     }
-
-    .input-box input::placeholder {
-        font-size: 1.5rem;
+    
+    .input input::placeholder,
+    .input-box i {
+        font-size: 1.8rem;
     }
-
-    .info-box i {
-        display: none;
+    
+    /* Tablette (Entre 768px et 1280px) */
+    @media (max-width: 1280px) {
+        header {
+            padding: 1rem 2rem;
+            gap: 3rem;
+        }
+    
+        .about .about-container {
+            gap: 3rem;
+        }
+    
+        .experience-info {
+            flex-direction: column;
+        }
+    
+        .input-box {
+            padding: 2rem;
+            font-size: 1.6rem;
+        }
+    
+        .input input::placeholder,
+        .input-box i {
+            font-size: 1.6rem;
+        }
     }
-
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
+    
+    /* Mobile (Entre 600px et 768px) */
+    @media (max-width: 768px) {
+        header {
+            padding: 1rem 1rem;
+            gap: 2rem;
+        }
+    
+        header .logo {
+            font-size: 1.2rem;
+        }
+    
+        header .visit-btn {
+            display: none;
+        }
+    
+        .about-container {
+            flex-direction: column;
+        }
+    
+        .input-box input {
+            padding: 1rem;
+            font-size: 1.4rem;
+        }
+    
+        .input-box input::placeholder {
+            font-size: 1.3rem;
+        }
+    
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    
+        .experience-info img {
+            width: 90%;
+        }
     }
-
-    .experience-info img {
-        width: 70vw;
-    }
-}
-
-@media(max-width:600px) {
-
-    header #menu-icone {
-        display: block;
-
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        margin-top: 1rem;
-        width: 100%;
-        padding: 1rem;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: black;
-        border-radius: 3rem;
-        display: none;
-    }
-
-    .nav-links li {
-        margin-top: 1.5rem;
-        padding: 1rem;
-    }
-
-    .nav-links.active {
-        display: block;
-    }
-
-    header {
-        padding: 1rem 5rem;
-        gap: 8rem;
-    }
-
-    header .logo {
-        font-size: 1.5rem;
-    }
-
-    .about-container img {
-        width: 80vw;
-    }
-
-    .input-box input {
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-    }
-
-    .input-box input::placeholder {
-        font-size: 1.5rem;
-    }
-
-    footer ul {
-        gap: 1rem;
-    }
-}
+    
+    /* Mobile étroit (Inférieur à 600px) */
+    @media (max-width: 600px) {
+        header {
+            padding: 1rem 1rem;
+            gap: 7.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        header .logo {
+            font-size: 1rem;
+        }
+    
+        header #menu-icone {
+            display: block;
+        }
+    
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: black;
+            color: white;
+            border-radius: 1rem;
+            display: none;
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .about-container img {
+            width: 100%;
+        }
+    
+        .input-box input {
+            padding: 0.5rem 1rem;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+    
+        footer ul {
+            gap: 1rem;
+            text-align: center;
+        }
+    }}
