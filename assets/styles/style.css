@@ -525,7 +525,7 @@ p .copyright {
     @media (max-width: 600px) {
         header {
             padding: 1rem 1rem;
-            gap: 4.5rem;
+            gap: 5.8rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
