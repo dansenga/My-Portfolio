@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <div id="loader-container">
+        <div class="loader"></div>
+    </div>
+    <!-- =========================Navbar========================= -->
     <header class="header">
         <a href="#" class="logo"><span style="font-family: 'Ubuntu';">Dan Senga</span></a>
 
@@ -29,8 +33,9 @@
             <button class="visit-btn">Visit Github</button>
         </a>
     </header>
+    <!-- =========================Fin Navbar========================= -->
 
-
+    <!-- =========================Hero-section========================= -->
     <section id="About" class="about">
         <div class="about-container">
             <img src="assets/Imgs/Dan Senga.jpg" alt="">
@@ -65,7 +70,9 @@
             </div>
         </div>
     </section>
+    <!-- =========================Fin Hero-section========================= -->
 
+    <!-- =========================Section Experiences========================= -->
     <section id="Experience" class="experience">
 
         <h2 class="section-title">Experience</h2>
@@ -117,7 +124,9 @@
         </div>
 
     </section>
+    <!-- =========================Fin section experiences========================= -->
 
+    <!-- =========================Section projets========================= -->
     <section id="Projets" class="projets">
 
         <h2 class="section-title">Recent Projets</h2>
@@ -135,7 +144,8 @@
                     <a href="#">
                         <div class="btn">
                             <!-- <i class="fas fa-link"></i>  -->
-                            Github</div>
+                            Github
+                        </div>
                     </a>
                 </div>
             </div>
@@ -167,12 +177,11 @@
                     </a>
                 </div>
             </div>
-
-
         </div>
-
     </section>
+    <!-- =========================Fin section projets========================= -->
 
+    <!-- =========================Formulaire========================= -->
     <section id="Contacts" class="contact">
 
         <h2 class="section-title">Contact Me</h2>
@@ -192,9 +201,10 @@
                 <button type="submit" class="btn">Envoyer</button>
             </form>
         </div>
-
     </section>
+    <!-- =========================Fin Formulaire========================= -->
 
+    <!-- =========================Footer========================= -->
     <footer class="footer">
         <ul class="social-icon">
             <a class="social-icon__link" href="https://github.com/dansenga">
@@ -210,18 +220,63 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </ul>
+
+        <!-- =========================Liens courts========================= -->
         <ul class="menu__footer">
             <li class="menu__item"><a class="menu__link" href="#About">About</a></li>
             <li class="menu__item"><a class="menu__link" href="#Experience">Experience</a></li>
             <li class="menu__item"><a class="menu__link" href="#Projets">Projets</a></li>
             <li class="menu__item"><a class="menu__link" href="#Contacts">Contacts</a></li>
         </ul>
-        <p class="copyright">&copy;2024 <a href="#"><b style="color: #6c63ff; font-family: 'Ubuntu';">Dan Senga</b></a> | All Rights Reserved</p>
+        <!-- =========================Fin Liens courts========================= -->
+
+        <!-- ====================Compteur des année automatique====================== -->
+        <p class="copyright" style="display: flex; justify-content: center; align-items: center; color: #000000;">
+            &copy; <span fs-hacks-element="year"></span> <a href="#"><b style="color: #6c63ff; font-family: 'Ubuntu';">
+                    Dan Senga</b></a> | All Rights Reserved</p>
+        <!-- ====================Fin Compteur des année automatique====================== -->
+
     </footer>
+    <!-- =========================Fin Footer========================= -->
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="assets/scripts/script.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-48X3HZGFM2');
+    </script>
+
+    <!-- ====================Compteur des année automatique Js====================== -->
+    <script>
+        // when the DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            // set the fs-hacks selector
+            const YEAR_SELECTOR = '[fs-hacks-element="year"]';
+            // get the the span element
+            const yearSpan = document.querySelector(YEAR_SELECTOR);
+
+            if (!yearSpan) return;
+            // get the current year
+            const currentYear = new Date().getFullYear();
+
+            // set the year span element's text to the current year
+            yearSpan.innerText = currentYear.toString();
+        });
+
+        // Masquer le loader lorsque la page est complètement chargée
+        window.addEventListener("load", () => {
+            const loaderContainer = document.getElementById("loader-container");
+            const content = document.getElementById("content");
+            loaderContainer.style.display = "none"; // Cache le loader
+            content.style.display = "block";       // Affiche le contenu de la page
+        });
+    </script>
+    <!-- ====================Fin Compteur des année automatique fin====================== -->
 </body>
 
 </html>
